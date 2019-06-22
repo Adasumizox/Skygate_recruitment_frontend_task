@@ -1,6 +1,6 @@
 # Skygate recruitment frontend task
 Simple web microservice that fetches information about country [short info from wiki, pollution data from openaq api]
-[screenshot](Project.png)
+![screenshot](Project.png?raw=true)
 
 # How to run project
 You need to:
@@ -36,7 +36,6 @@ npm build
 
 # Task list
 - [ ] Start using frameworks to make my life easier (Angular, react, vue or even jquery).
-- [ ] Change usage of openaq api to reduce loading time by either taking less data per request or scanning days e.g 30 instead of fetching all database.
+- [ ] Change usage of openaq api to reduce loading time by either taking less data per request or scanning less days for example only 30 instead of fetching all database.
 - [ ] Write tests especially mocking tests and time tests for my app.
 - [ ] Change styles or way of integrating DOM in my project.
-- [ ] Start writting more async functions

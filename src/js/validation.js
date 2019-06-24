@@ -1,6 +1,3 @@
-import fetchwiki from './fetchwiki';
-import fetchpollution from './fetchpollution';
-
 export default function validation(arr)
 {
     const input = document.getElementById('myInput');

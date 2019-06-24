@@ -1,3 +1,4 @@
+let $ = require('jquery');
 export default function fetchpollution(name)
 {
     const dict = {
@@ -19,9 +20,19 @@ export default function fetchpollution(name)
             }
         }
         document.getElementById('pollution').innerHTML= 'Top 10 most polluted cities in country';
-        var myTable = "";
+        let myTable = "";
         for (let item of set1) {
-            myTable+="<tr><td>" + item + "</td>";
+            myTable+="<tr><td>" + item;
+            let url2 = 'https://en.wikipedia.org/w/api.php?action=query&titles=' + item + '&format=json&prop=description&formatversion=2&origin=*';
+            $.ajax({
+                tpye: "GET",
+                url: url2,
+                async: false,
+            }).done(function(data) {
+                myTable+= " - " + data.query.pages[0].description + "</td>";
+            }).fail(function(e) {
+                console.log(e.message());
+            });
         }
         document.getElementById('polrec').innerHTML=myTable;
     })

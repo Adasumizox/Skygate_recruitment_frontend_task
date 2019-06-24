@@ -39,3 +39,4 @@ npm build
 - [ ] Change usage of openaq api to reduce loading time by either taking less data per request or scanning less days for example only 30 instead of fetching all database.
 - [ ] Write tests especially mocking tests and time tests for my app.
 - [ ] Change styles or way of integrating DOM in my project.
+- [ ] Think of changing the implementation of synchronous/asynchronous requests to make loading of site faster

@@ -9,7 +9,9 @@
         "test": "jest",
         "test:coverage": "jest --coverage"
     },
-    "dependencies": {},
+    "dependencies": {
+        "jquery": "^3.4.1"
+    },
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",

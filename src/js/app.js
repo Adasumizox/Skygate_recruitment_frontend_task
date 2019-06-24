@@ -1,7 +1,6 @@
 const css = require('../css/style.scss');
 import autocomplete from './autocomplete';
 import validation from './validation';
-import fetchwiki from './fetchwiki';
 import fetchpollution from "./fetchpollution";
 
 const avaibleCountries = [
@@ -17,5 +16,4 @@ if(sessionStorage.getItem('country') != null) {
 autocomplete(document.getElementById("myInput"), avaibleCountries);
 validation(avaibleCountries);
 const inval = document.getElementById("myInput").value;
-fetchwiki(inval);
 fetchpollution(inval);

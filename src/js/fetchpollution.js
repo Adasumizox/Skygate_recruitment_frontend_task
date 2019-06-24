@@ -21,9 +21,14 @@ export default function fetchpollution(name)
         }
         document.getElementById('pollution').innerHTML= 'Top 10 most polluted cities in country';
         let myTable = "";
+        const dict2 = {
+            "Sachsen-Anhalt": "Saxony-Anhalt",
+            "Niedersachsen": "Lower_Saxony",
+
+        };
         for (let item of set1) {
             myTable+="<tr><td>" + item;
-            let url2 = 'https://en.wikipedia.org/w/api.php?action=query&titles=' + item + '&format=json&prop=description&formatversion=2&origin=*';
+            let url2 = 'https://en.wikipedia.org/w/api.php?action=query&titles=' + item + '&redirects&format=json&prop=description&formatversion=2&origin=*';
             $.ajax({
                 tpye: "GET",
                 url: url2,

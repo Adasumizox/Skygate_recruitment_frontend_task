@@ -21,7 +21,7 @@ export default function validation(arr)
         }
         if (messages.length > 0) {
             e.preventDefault();
-            errorspan.innerText = messages.join();
+            errorspan.textContent = messages.join();
         }
     });
 }

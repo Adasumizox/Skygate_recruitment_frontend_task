@@ -37,6 +37,9 @@ body {
   position: relative;
   display: inline-block;
 }
+.error {
+  color: red;
+}
 input {
   border: none;
   outline: none;
@@ -54,18 +57,19 @@ input[type=submit] {
 }
 .autocomplete-items {
   position: absolute;
-  border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
   z-index: 99;
   top: 100%;
   left: 0;
   right: 0;
+  color: black;
 }
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
   background-color: map-get($theme, fore);
+  border-top: 1px solid #d4d4d4;
   border-bottom: 1px solid #d4d4d4;
 }
 .autocomplete-items div:hover {

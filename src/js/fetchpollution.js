@@ -32,6 +32,7 @@ export default function fetchpollution(name)
         for (let item of set1) {
             myTable+="<tr><td>" + item;
             //redirections on wiki are really weird so i hardcoded values :(
+            //could propably be replaced by using regex in case of spain and adding _(department) in case of french
             for(var key in dict2) {
                 if (item==key){
                     item=dict2[key];

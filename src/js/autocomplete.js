@@ -35,8 +35,7 @@ export default function autocomplete(inp, arr) {
             currentFocus--;
             addActive(x);
         } else if (e.keyCode == 13) {
-            //If the ENTER key is pressed, prevent the form from being submitted
-            e.preventDefault();
+            //If the ENTER key is pressed
             if (currentFocus > -1) {
                 if (x) x[currentFocus].click();
             }

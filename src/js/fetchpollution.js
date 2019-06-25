@@ -22,12 +22,21 @@ export default function fetchpollution(name)
         document.getElementById('pollution').innerHTML= 'Top 10 most polluted cities in country';
         let myTable = "";
         const dict2 = {
-            "Sachsen-Anhalt": "Saxony-Anhalt",
-            "Niedersachsen": "Lower_Saxony",
-
+            'Landes': 'Landes_(department)',
+            'Marne': 'Marne_(department)',
+            'Calvados': 'Calvados_(department)',
+            'Rhône': 'Rhône_(department)',
+            'Castellón/Castelló':'Castellón_de_la_Plana',
+            'Valencia/València':'Valencia'
         };
         for (let item of set1) {
             myTable+="<tr><td>" + item;
+            //redirections on wiki are really weird so i hardcoded values :(
+            for(var key in dict2) {
+                if (item==key){
+                    item=dict2[key];
+                }
+            }
             let url2 = 'https://en.wikipedia.org/w/api.php?action=query&titles=' + item + '&redirects&format=json&prop=description&formatversion=2&origin=*';
             $.ajax({
                 tpye: "GET",
